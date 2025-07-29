@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banjo Laurel National High School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#events">Upcoming Events</a></li>
+        <li><a href="#students">Students</a></li>
+        <li><a href="#teachers">Teachers</a></li>
+        <li><a href="#forms">Request Forms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Banjo Laurel National High School</h1>
+    <p>We aim to foster academic excellence and holistic development in our students.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Banjo Laurel National High School was established in [Year] with the goal of providing high-quality education to students...</p>
+  </section>
+
+  <!-- Announcements Section -->
+  <section id="announcements">
+    <h2>Announcements</h2>
+    <ul>
+      <li>School reopening on August 1, 2025</li>
+      <li>New extracurricular clubs starting soon</li>
+    </ul>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="image-gallery">
+      <img src="event1.jpg" alt="Sports Day Event">
+      <img src="event2.jpg" alt="Science Fair">
+      <!-- Add more images here -->
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>Sports Meet: September 2025</li>
+      <li>School Annual Day: December 2025</li>
+    </ul>
+  </section>
+
+  <!-- Students Section -->
+  <section id="students">
+    <h2>Student Portal</h2>
+    <p>Students can access grades, assignments, and resources here.</p>
+    <a href="login.html">Login</a>
+  </section>
+
+  <!-- Teachers Section -->
+  <section id="teachers">
+    <h2>Teacher's Section</h2>
+    <p>Resources and teaching materials available here for all staff.</p>
+  </section>
+
+  <!-- Request Forms Section -->
+  <section id="forms">
+    <h2>Request Forms</h2>
+    <form action="/submit-form" method="POST">
+      <label for="form-type">Type of Request:</label>
+      <select name="form-type" id="form-type">
+        <option value="certificate">Certificate Request</option>
+        <option value="permission">Permission Slip</option>
+      </select>
+      <label for="message">Additional Details:</label>
+      <textarea name="message" id="message" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Banjo Laurel National High School</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+style.css (CSS for the Website)
+css
+Copy
+Edit
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;  /* Green */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #4CAF50;
+}
+
+/* Gallery Styles */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.image-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea, form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design with Flexbox and Grid */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
